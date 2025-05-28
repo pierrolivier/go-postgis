@@ -63,7 +63,7 @@ func (p Point) Value() (driver.Value, error) {
 		return nil, err
 	}
 
-	return buffer.Bytes(), nil
+	return encode(buffer), nil
 }
 
 func (p Point) Write(buffer *bytes.Buffer) error {
@@ -95,7 +95,7 @@ func (p PointZ) Value() (driver.Value, error) {
 		return nil, err
 	}
 
-	return buffer.Bytes(), nil
+	return encode(buffer), nil
 }
 
 func (p PointZ) Write(buffer *bytes.Buffer) error {
@@ -159,7 +159,7 @@ func (p PointZM) Value() (driver.Value, error) {
 		return nil, err
 	}
 
-	return buffer.Bytes(), nil
+	return encode(buffer), nil
 }
 
 func (p PointZM) Write(buffer *bytes.Buffer) error {
@@ -191,7 +191,7 @@ func (p PointS) Value() (driver.Value, error) {
 		return nil, err
 	}
 
-	return buffer.Bytes(), nil
+	return encode(buffer), nil
 }
 
 func (p PointS) Write(buffer *bytes.Buffer) error {
@@ -223,7 +223,7 @@ func (p PointZS) Value() (driver.Value, error) {
 		return nil, err
 	}
 
-	return buffer.Bytes(), nil
+	return encode(buffer), nil
 }
 
 func (p PointZS) Write(buffer *bytes.Buffer) error {
@@ -255,7 +255,7 @@ func (p PointMS) Value() (driver.Value, error) {
 		return nil, err
 	}
 
-	return buffer.Bytes(), nil
+	return encode(buffer), nil
 }
 
 func (p PointMS) Write(buffer *bytes.Buffer) error {
@@ -287,7 +287,7 @@ func (p PointZMS) Value() (driver.Value, error) {
 		return nil, err
 	}
 
-	return buffer.Bytes(), nil
+	return encode(buffer), nil
 }
 
 func (p PointZMS) Write(buffer *bytes.Buffer) error {
